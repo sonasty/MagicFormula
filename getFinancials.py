@@ -17,6 +17,8 @@ i = 0
 
 # Even more comments
 
+#Dude, stop commenting....
+
 #df_advfnFinancials_sp500 = f.getAdvfnFinancials(symbol="ARNC",startDateNumber=0,output="",quickTest=True)
 
 
