@@ -13,6 +13,8 @@ tickerList = df_indexConstituents["TICKER"][0:2]
 df_advfnFinancials_sp500 = pd.DataFrame()
 i = 0
 
+# Some new comments
+
 #df_advfnFinancials_sp500 = f.getAdvfnFinancials(symbol="ARNC",startDateNumber=0,output="",quickTest=True)
 
 
