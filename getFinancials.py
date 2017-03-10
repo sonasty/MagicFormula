@@ -3,9 +3,6 @@ __author__ = 'Christian'
 import functions as f
 import pandas as pd
 
-#No data at all: AARN
-#Even number of quarters:
-
 hdr = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11',
        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
        'Accept-Charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3',
@@ -20,12 +17,11 @@ tickerList = df_indexConstituents["TICKER"][400:-1]
 df_advfnFinancials_sp500 = pd.DataFrame()
 i = 0
 
-#df_advfnFinancials_sp500 = f.getAdvfnFinancials(symbol="ARNC",startDateNumber=0,output="",quickTest=True)
-
 for ticker in tickerList:
   i += 1
   print ""
   print "ticker number: " + str(i)
   df_advfnFinancials_sp500 = df_advfnFinancials_sp500.append(f.getAdvfnFinancials(symbol=ticker,headers=hdr,startDateNumber=0,output="",quickTest=False))
 
-df_advfnFinancials_sp500.to_csv("/home/christian/Dev/PYTHON/Projects/MagicForumula/Data/advfn_financials_sp500_500.csv", index=False, sep=";", header=1)
+#df_advfnFinancials_sp500.to_csv("/home/christian/Dev/PYTHON/Projects/MagicForumula/Data/advfn_financials_sp500_500.csv", index=False, sep=";", header=1)
+

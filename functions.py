@@ -170,3 +170,10 @@ def getWikiIndexConstituents(csvFileNameExtention,url,output="file"):
     df_IndexConstituents.to_csv(output_file,index=False, sep=";", header=1)
 
   return df_IndexConstituents
+
+
+
+
+
+
+
