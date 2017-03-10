@@ -1,10 +1,10 @@
 __author__ = 'Christian'
 
 from bs4 import BeautifulSoup
-from urllib import urlopen
+from urllib2 import urlopen,build_opener,Request
 import pandas as pd
 
-def getAdvfnFinancials(symbol,startDateNumber=0,output="file",quickTest=False):
+def getAdvfnFinancials(symbol,headers,startDateNumber=0,output="file",quickTest=False):
 
   #The starting datenumber
   dateNumber = startDateNumber
@@ -27,7 +27,9 @@ def getAdvfnFinancials(symbol,startDateNumber=0,output="file",quickTest=False):
     else:
       url = "http://uk.advfn.com/p.php?pid=financials&btn=istart_date&mode=quarterly_reports&symbol=NYSE%3A" + symbol + "&istart_date=" + str(dateNumber)
 
-    html_doc = urlopen(url)
+    # Instantiate soup and urllib2 objects
+    req = Request(url, None, headers)
+    html_doc = urlopen(req)
     soup = BeautifulSoup(html_doc, 'html.parser')
     rows = soup.findAll('tr')
 
