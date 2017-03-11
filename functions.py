@@ -9,7 +9,7 @@ def getAdvfnFinancials(symbol,headers,startDateNumber=0,output="file",quickTest=
   #The starting datenumber
   dateNumber = startDateNumber
 
-  #Set som booleans and checkers
+  #Set som booleans and checkerssh
   dataExist = False
   _quicktest = False #Only scrape first page if quickTest = True
   lastDate = ""
